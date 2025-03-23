@@ -2,7 +2,7 @@
 #define PREF_H
 
 void pref_init(void);
-void pref_restart(void);
+gboolean pref_restart(int button_pressed, gpointer userdata);
 extern GaiPI shermans_pref[];
 
 #endif

@@ -408,7 +408,7 @@ GaiPI shermans_pref[] = {
 {GAI_END}};
 
 
-void pref_restart(gpointer d)
+gboolean pref_restart(int button_pressed, gpointer userdata)
 {
     Background_settings *bas;
     Bottom_settings *bos;
@@ -497,6 +497,7 @@ void pref_restart(gpointer d)
 
     aquarium_reload_all();
     ad->dont_update = 0;
+    return TRUE;
 }
 
 void pref_init(void)
